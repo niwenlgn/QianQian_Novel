@@ -1,0 +1,12 @@
+G:\QianQian_Novel\QianQian_Novel.Model\bin\Debug\net6.0\QianQian_Novel.Model.deps.json
+G:\QianQian_Novel\QianQian_Novel.Model\bin\Debug\net6.0\QianQian_Novel.Model.dll
+G:\QianQian_Novel\QianQian_Novel.Model\bin\Debug\net6.0\QianQian_Novel.Model.pdb
+G:\QianQian_Novel\QianQian_Novel.Model\obj\Debug\net6.0\QianQian_Novel.Model.csproj.AssemblyReference.cache
+G:\QianQian_Novel\QianQian_Novel.Model\obj\Debug\net6.0\QianQian_Novel.Model.GeneratedMSBuildEditorConfig.editorconfig
+G:\QianQian_Novel\QianQian_Novel.Model\obj\Debug\net6.0\QianQian_Novel.Model.AssemblyInfoInputs.cache
+G:\QianQian_Novel\QianQian_Novel.Model\obj\Debug\net6.0\QianQian_Novel.Model.AssemblyInfo.cs
+G:\QianQian_Novel\QianQian_Novel.Model\obj\Debug\net6.0\QianQian_Novel.Model.csproj.CoreCompileInputs.cache
+G:\QianQian_Novel\QianQian_Novel.Model\obj\Debug\net6.0\QianQian_Novel.Model.dll
+G:\QianQian_Novel\QianQian_Novel.Model\obj\Debug\net6.0\refint\QianQian_Novel.Model.dll
+G:\QianQian_Novel\QianQian_Novel.Model\obj\Debug\net6.0\QianQian_Novel.Model.pdb
+G:\QianQian_Novel\QianQian_Novel.Model\obj\Debug\net6.0\ref\QianQian_Novel.Model.dll

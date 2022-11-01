@@ -1,0 +1,17 @@
+G:\QianQian_Novel\QianQian_Novel.Domain.RedisDemo\bin\Debug\net6.0\QianQian_Novel.Domain.RedisDemo.deps.json
+G:\QianQian_Novel\QianQian_Novel.Domain.RedisDemo\bin\Debug\net6.0\QianQian_Novel.Domain.RedisDemo.dll
+G:\QianQian_Novel\QianQian_Novel.Domain.RedisDemo\bin\Debug\net6.0\QianQian_Novel.Domain.RedisDemo.pdb
+G:\QianQian_Novel\QianQian_Novel.Domain.RedisDemo\bin\Debug\net6.0\QianQian_Novel.MyUtility.dll
+G:\QianQian_Novel\QianQian_Novel.Domain.RedisDemo\bin\Debug\net6.0\QianQian_Novel.Redis.dll
+G:\QianQian_Novel\QianQian_Novel.Domain.RedisDemo\bin\Debug\net6.0\QianQian_Novel.MyUtility.pdb
+G:\QianQian_Novel\QianQian_Novel.Domain.RedisDemo\bin\Debug\net6.0\QianQian_Novel.Redis.pdb
+G:\QianQian_Novel\QianQian_Novel.Domain.RedisDemo\obj\Debug\net6.0\QianQian_Novel.Domain.RedisDemo.csproj.AssemblyReference.cache
+G:\QianQian_Novel\QianQian_Novel.Domain.RedisDemo\obj\Debug\net6.0\QianQian_Novel.Domain.RedisDemo.GeneratedMSBuildEditorConfig.editorconfig
+G:\QianQian_Novel\QianQian_Novel.Domain.RedisDemo\obj\Debug\net6.0\QianQian_Novel.Domain.RedisDemo.AssemblyInfoInputs.cache
+G:\QianQian_Novel\QianQian_Novel.Domain.RedisDemo\obj\Debug\net6.0\QianQian_Novel.Domain.RedisDemo.AssemblyInfo.cs
+G:\QianQian_Novel\QianQian_Novel.Domain.RedisDemo\obj\Debug\net6.0\QianQian_Novel.Domain.RedisDemo.csproj.CoreCompileInputs.cache
+G:\QianQian_Novel\QianQian_Novel.Domain.RedisDemo\obj\Debug\net6.0\QianQian_Novel.Domain.RedisDemo.csproj.CopyComplete
+G:\QianQian_Novel\QianQian_Novel.Domain.RedisDemo\obj\Debug\net6.0\QianQian_Novel.Domain.RedisDemo.dll
+G:\QianQian_Novel\QianQian_Novel.Domain.RedisDemo\obj\Debug\net6.0\refint\QianQian_Novel.Domain.RedisDemo.dll
+G:\QianQian_Novel\QianQian_Novel.Domain.RedisDemo\obj\Debug\net6.0\QianQian_Novel.Domain.RedisDemo.pdb
+G:\QianQian_Novel\QianQian_Novel.Domain.RedisDemo\obj\Debug\net6.0\ref\QianQian_Novel.Domain.RedisDemo.dll
