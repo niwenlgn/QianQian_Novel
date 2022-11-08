@@ -7,7 +7,6 @@
     <UserSecretsId>6b4570df-a0e8-4203-8830-f8d47b6082b0</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <DocumentationFile>./QianQian_Novel.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>QianQian_Novel</name>
+    </assembly>
+    <members>
+        <member name="T:QianQian_Novel.Controllers.UserManagementController">
+            <summary>
+            用户服务
+            </summary>
+        </member>
+        <member name="M:QianQian_Novel.Controllers.UserManagementController.#ctor(QianQian_Novel.Domain.RedisDemo.Service.RedisService)">
+            <summary>
+            构造
+            </summary>
+            <param name="redisService"></param>
+        </member>
+        <member name="M:QianQian_Novel.Controllers.UserManagementController.Test">
+            <summary>
+            测试Get请求
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QianQian_Novel.Controllers.UserManagementController.Test1(QianQian_Novel.Model.UserManagement.LoginRequest)">
+            <summary>
+            测试Post请求
+            </summary>
+            <param name="jobj">验证信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:QianQian_Novel.Controllers.UserManagementController.Test2(QianQian_Novel.Model.UserManagement.LoginRequest,System.String)">
+            <summary>
+            测试Delete请求
+            </summary>
+            <param name="jobj">验证信息</param>
+            <param name="id">关联ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:QianQian_Novel.Controllers.UserManagementController.Test3(QianQian_Novel.Model.UserManagement.LoginRequest,System.String)">
+            <summary>
+            测试Put请求
+            </summary>
+            <param name="jobj">验证信息</param>
+            <param name="id">关联ID</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
