@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>QianQian_Novel.Model</name>
+    </assembly>
+    <members>
+        <member name="P:QianQian_Novel.Model.Basic.BaseResponse.Code">
+            <summary>
+            状态码
+            </summary>
+        </member>
+        <member name="P:QianQian_Novel.Model.Basic.BaseResponse.Msg">
+            <summary>
+            信息
+            </summary>
+        </member>
+        <member name="P:QianQian_Novel.Model.UserManagement.LoginRequest.Account">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="P:QianQian_Novel.Model.UserManagement.LoginRequest.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:QianQian_Novel.Model.UserManagement.LoginRequest.Code">
+            <summary>
+            验证码
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -5,7 +5,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <DocumentationFile>../QianQian_Novel/QianQian_Model.xml</DocumentationFile>
+    <DocumentationFile>../QianQian_Novel/QianQian_Entity.xml</DocumentationFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="EntityKeyless\" />
+  </ItemGroup>
 
 </Project>

@@ -11,3 +11,7 @@
 /Tests/bin
 /Tests/obj
 /.vs
+/QianQian_Novel.PostgreSQL/bin
+/QianQian_Novel.PostgreSQL/obj
+/QianQian_Novel.Entity/bin
+/QianQian_Novel.Entity/obj

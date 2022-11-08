@@ -17,14 +17,16 @@ namespace QianQian_Novel.Controllers
     public class UserManagementController : ControllerBase
     {
         readonly RedisService _redisService;
-        
+        readonly DBService _dbService;
+
         /// <summary>
         /// 构造
         /// </summary>
         /// <param name="redisService"></param>
-        public UserManagementController(RedisService redisService)
+        public UserManagementController(RedisService redisService, DBService dbService)
         {
             _redisService = redisService;
+            _dbService = dbService;
         }
         /// <summary>
         /// 测试Get请求
@@ -74,7 +76,7 @@ namespace QianQian_Novel.Controllers
         /// <param name="id">关联ID</param>
         /// <returns></returns>
         [HttpDelete]
-        public async Task<object> Test2([FromBody] LoginRequest jobj,[FromQuery] string id)
+        public async Task<object> Test2([FromBody] LoginRequest jobj, [FromQuery] string id)
         {
             var res = await _redisService.DeleteKey(id);
             var a = new BaseResponse<object>
@@ -120,6 +122,38 @@ namespace QianQian_Novel.Controllers
 
                 throw;
             }
+        }
+
+
+        /// <summary>
+        /// 测试pg数据库
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public async Task<object> Test4()
+        {
+            var res = await _dbService.GetUser();
+            return new BaseResponse
+            {
+                Code = BaseStatusCode.Success,
+                Msg = res
+            };
+        }
+
+        /// <summary>
+        /// 根据id获取用户
+        /// </summary>
+        /// <param name="userID"></param>
+        /// <returns></returns>
+        [HttpGet]
+        public async Task<object> FindUser(long userID)
+        {
+            var res = await _dbService.FindUsers(userID);
+            return new BaseResponse
+            {
+                Code = BaseStatusCode.Success,
+                Msg = res
+            };
         }
     }
 }

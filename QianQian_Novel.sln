@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QianQian_Novel", "QianQian_Novel\QianQian_Novel.csproj", "{8802A338-678F-43A6-9DBE-FED480A9EEAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QianQian_Novel", "QianQian_Novel\QianQian_Novel.csproj", "{8802A338-678F-43A6-9DBE-FED480A9EEAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QianQian_Novel.Model", "QianQian_Novel.Model\QianQian_Novel.Model.csproj", "{B4EC5253-1003-41BD-8249-263A46C278A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QianQian_Novel.Model", "QianQian_Novel.Model\QianQian_Novel.Model.csproj", "{B4EC5253-1003-41BD-8249-263A46C278A7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{A3FDEA22-7C1C-4223-A4C2-65591A7478FC}"
 EndProject
@@ -13,15 +13,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repository", "Repository", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{7B47FF06-3D7E-4A8D-B51F-C3BD890CDF8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{32D85777-4CCE-4E82-A45A-3EBD7AC07F0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{32D85777-4CCE-4E82-A45A-3EBD7AC07F0B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{AB28C7B9-C9D7-4FC6-8B22-8BCDE2FCB026}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QianQian_Novel.MyUtility", "QianQian_Novel.MyUtility\QianQian_Novel.MyUtility.csproj", "{60058098-FC4A-41E6-84E8-613FBE75487F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QianQian_Novel.MyUtility", "QianQian_Novel.MyUtility\QianQian_Novel.MyUtility.csproj", "{60058098-FC4A-41E6-84E8-613FBE75487F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QianQian_Novel.Redis", "QianQian_Novel.Redis\QianQian_Novel.Redis.csproj", "{97BC0FEC-03CA-4CD0-B793-B368A9E7C3DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QianQian_Novel.Redis", "QianQian_Novel.Redis\QianQian_Novel.Redis.csproj", "{97BC0FEC-03CA-4CD0-B793-B368A9E7C3DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QianQian_Novel.Domain.RedisDemo", "QianQian_Novel.Domain.RedisDemo\QianQian_Novel.Domain.RedisDemo.csproj", "{D77B7A0A-343D-40F3-AEA9-59B6449F273B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QianQian_Novel.Domain.RedisDemo", "QianQian_Novel.Domain.RedisDemo\QianQian_Novel.Domain.RedisDemo.csproj", "{D77B7A0A-343D-40F3-AEA9-59B6449F273B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QianQian_Novel.PostgreSQL", "QianQian_Novel.PostgreSQL\QianQian_Novel.PostgreSQL.csproj", "{23198F60-8835-4C67-A216-4A8E1163B195}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QianQian_Novel.Entity", "QianQian_Novel.Entity\QianQian_Novel.Entity.csproj", "{162B5394-95CC-4118-A1C9-EEBE05B2C409}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +57,14 @@ Global
 		{D77B7A0A-343D-40F3-AEA9-59B6449F273B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D77B7A0A-343D-40F3-AEA9-59B6449F273B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D77B7A0A-343D-40F3-AEA9-59B6449F273B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23198F60-8835-4C67-A216-4A8E1163B195}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23198F60-8835-4C67-A216-4A8E1163B195}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23198F60-8835-4C67-A216-4A8E1163B195}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23198F60-8835-4C67-A216-4A8E1163B195}.Release|Any CPU.Build.0 = Release|Any CPU
+		{162B5394-95CC-4118-A1C9-EEBE05B2C409}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{162B5394-95CC-4118-A1C9-EEBE05B2C409}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{162B5394-95CC-4118-A1C9-EEBE05B2C409}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{162B5394-95CC-4118-A1C9-EEBE05B2C409}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +74,8 @@ Global
 		{32D85777-4CCE-4E82-A45A-3EBD7AC07F0B} = {7B47FF06-3D7E-4A8D-B51F-C3BD890CDF8F}
 		{97BC0FEC-03CA-4CD0-B793-B368A9E7C3DE} = {D297068A-9DEF-4671-8042-9CAF51E1EAC7}
 		{D77B7A0A-343D-40F3-AEA9-59B6449F273B} = {A3FDEA22-7C1C-4223-A4C2-65591A7478FC}
+		{23198F60-8835-4C67-A216-4A8E1163B195} = {D297068A-9DEF-4671-8042-9CAF51E1EAC7}
+		{162B5394-95CC-4118-A1C9-EEBE05B2C409} = {AB28C7B9-C9D7-4FC6-8B22-8BCDE2FCB026}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {634E583C-47CF-4933-BF21-90A79F75E000}
