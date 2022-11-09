@@ -9,11 +9,13 @@
             用户服务
             </summary>
         </member>
-        <member name="M:QianQian_Novel.Controllers.UserManagementController.#ctor(QianQian_Novel.Domain.RedisDemo.Service.RedisService,QianQian_Novel.Domain.RedisDemo.Service.DBService)">
+        <member name="M:QianQian_Novel.Controllers.UserManagementController.#ctor(QianQian_Novel.Domain.RedisDemo.Service.RedisService,QianQian_Novel.Domain.RedisDemo.Service.DBService,QianQian_Novel.Helper.JWTHelper)">
             <summary>
             构造
             </summary>
             <param name="redisService"></param>
+            <param name="dbService"></param>
+            <param name="jwtHelper"></param>
         </member>
         <member name="M:QianQian_Novel.Controllers.UserManagementController.Test">
             <summary>
@@ -36,6 +38,13 @@
             <param name="id">关联ID</param>
             <returns></returns>
         </member>
+        <member name="M:QianQian_Novel.Controllers.UserManagementController.Login(QianQian_Novel.Model.UserManagement.LoginRequest)">
+            <summary>
+            登录
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
         <member name="M:QianQian_Novel.Controllers.UserManagementController.Test3(QianQian_Novel.Model.UserManagement.LoginRequest,System.String)">
             <summary>
             测试Put请求
@@ -55,6 +64,60 @@
             根据id获取用户
             </summary>
             <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:QianQian_Novel.Filter.PermissionRequiredAttribute">
+            <summary>
+            请求过滤器
+            </summary>
+        </member>
+        <member name="T:QianQian_Novel.Helper.JWTHelper">
+            <summary>
+            JWT帮助
+            </summary>
+        </member>
+        <member name="M:QianQian_Novel.Helper.JWTHelper.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            JWT帮助
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:QianQian_Novel.Helper.JWTHelper.GetToken(System.Collections.Generic.List{System.Security.Claims.Claim})">
+            <summary>
+            获取JWT Token
+            </summary>
+            <param name="authClaims"></param>
+            <returns></returns>
+        </member>
+        <member name="T:QianQian_Novel.Middleware.ConstantInitializationMiddleware">
+            <summary>
+            常量配置初始化中间件
+            </summary>
+        </member>
+        <member name="M:QianQian_Novel.Middleware.ConstantInitializationMiddleware.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.AspNetCore.Http.RequestDelegate)">
+            <summary>
+            初始化
+            </summary>
+            <param name="configuration"></param>
+            <param name="next"></param>
+        </member>
+        <member name="M:QianQian_Novel.Middleware.ConstantInitializationMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:QianQian_Novel.Middleware.ConstantInitializationExtensions">
+            <summary>
+            常量配置初始化中间件
+            </summary>
+        </member>
+        <member name="M:QianQian_Novel.Middleware.ConstantInitializationExtensions.ConstantInitialization(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            常量配置初始化
+            </summary>
+            <param name="app"></param>
             <returns></returns>
         </member>
     </members>

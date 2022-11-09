@@ -4,5 +4,35 @@
         <name>QianQian_Novel.Entity</name>
     </assembly>
     <members>
+        <member name="T:QianQian_Novel.Entity.Entity.BaseUser">
+            <summary>
+            用户表
+            </summary>
+        </member>
+        <member name="P:QianQian_Novel.Entity.Entity.BaseUser.Userid">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:QianQian_Novel.Entity.Entity.BaseUser.UserName">
+            <summary>
+            用户姓名
+            </summary>
+        </member>
+        <member name="P:QianQian_Novel.Entity.Entity.BaseUser.Age">
+            <summary>
+            用户年龄
+            </summary>
+        </member>
+        <member name="P:QianQian_Novel.Entity.Entity.BaseUser.Sex">
+            <summary>
+            用户性别
+            </summary>
+        </member>
+        <member name="P:QianQian_Novel.Entity.Entity.BaseUser.Password">
+            <summary>
+            用户密码
+            </summary>
+        </member>
     </members>
 </doc>

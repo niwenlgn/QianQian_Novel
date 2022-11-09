@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <DocumentationFile>../QianQian_Novel/QianQian_Entity.xml</DocumentationFile>
+    <DocumentationFile>../QianQian_Novel/bin/Debug/net6.0/QianQian_Entity.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

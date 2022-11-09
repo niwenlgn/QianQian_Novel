@@ -4,14 +4,70 @@
         <name>QianQian_Novel.Model</name>
     </assembly>
     <members>
+        <member name="T:QianQian_Novel.Model.Basic.BaseResponse">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="P:QianQian_Novel.Model.Basic.BaseResponse.Code">
             <summary>
             状态码
             </summary>
         </member>
+        <member name="P:QianQian_Novel.Model.Basic.BaseResponse.Result">
+            <summary>
+            执行结果
+            </summary>
+        </member>
         <member name="P:QianQian_Novel.Model.Basic.BaseResponse.Msg">
             <summary>
             信息
+            </summary>
+        </member>
+        <member name="T:QianQian_Novel.Model.Basic.BaseResponse`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:QianQian_Novel.Model.Basic.BaseResponse`1.Data">
+            <summary>
+            数据
+            </summary>
+        </member>
+        <member name="P:QianQian_Novel.Model.Basic.BaseResponse`1.Count">
+            <summary>
+            数量
+            </summary>
+        </member>
+        <member name="F:QianQian_Novel.Model.Enum.BaseStatusCode.Success">
+            <summary>
+            成功
+            </summary>
+        </member>
+        <member name="F:QianQian_Novel.Model.Enum.BaseStatusCode.Warn">
+            <summary>
+            警告
+            </summary>
+        </member>
+        <member name="F:QianQian_Novel.Model.Enum.BaseStatusCode.NoAccess">
+            <summary>
+            无权限
+            </summary>
+        </member>
+        <member name="F:QianQian_Novel.Model.Enum.BaseStatusCode.PasswordAging">
+            <summary>
+            密码过期
+            </summary>
+        </member>
+        <member name="F:QianQian_Novel.Model.Enum.BaseStatusCode.Error">
+            <summary>
+            错误
+            </summary>
+        </member>
+        <member name="F:QianQian_Novel.Model.Enum.BaseStatusCode.Unknow">
+            <summary>
+            未知
             </summary>
         </member>
         <member name="P:QianQian_Novel.Model.UserManagement.LoginRequest.Account">
@@ -27,6 +83,36 @@
         <member name="P:QianQian_Novel.Model.UserManagement.LoginRequest.Code">
             <summary>
             验证码
+            </summary>
+        </member>
+        <member name="T:QianQian_Novel.Model.UserManagement.UserInfo">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="P:QianQian_Novel.Model.UserManagement.UserInfo.Userid">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:QianQian_Novel.Model.UserManagement.UserInfo.UserName">
+            <summary>
+            用户姓名
+            </summary>
+        </member>
+        <member name="P:QianQian_Novel.Model.UserManagement.UserInfo.Age">
+            <summary>
+            用户年龄
+            </summary>
+        </member>
+        <member name="P:QianQian_Novel.Model.UserManagement.UserInfo.Sex">
+            <summary>
+            用户性别
+            </summary>
+        </member>
+        <member name="P:QianQian_Novel.Model.UserManagement.UserInfo.Password">
+            <summary>
+            用户密码
             </summary>
         </member>
     </members>

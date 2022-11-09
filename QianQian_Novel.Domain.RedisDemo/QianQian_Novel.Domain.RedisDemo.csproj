@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\QianQian_Novel.Model\QianQian_Novel.Model.csproj" />
     <ProjectReference Include="..\QianQian_Novel.MyUtility\QianQian_Novel.MyUtility.csproj" />
     <ProjectReference Include="..\QianQian_Novel.PostgreSQL\QianQian_Novel.PostgreSQL.csproj" />
     <ProjectReference Include="..\QianQian_Novel.Redis\QianQian_Novel.Redis.csproj" />

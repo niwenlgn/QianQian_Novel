@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using QianQian_Novel.Entity.Entity;
+using QianQian_Novel.Model.UserManagement;
 using QianQian_Novel.MyUtility;
 using System;
 using System.Collections.Generic;
@@ -13,6 +15,7 @@ namespace QianQian_Novel.Domain.RedisDemo.Service
 
         public AutoMapperProfiles()
         {
+            CreateMap<BaseUser, UserInfo>();
             #region 公共
             CreateMap<long, DateTime?>().ConvertUsing(source => source == 0 ? null : new DateTime?(source.ToDateTime()));
             CreateMap<DateTime?, long>().ConvertUsing(source => source == null ? 0 : source.Value.ToUnixStamp());
