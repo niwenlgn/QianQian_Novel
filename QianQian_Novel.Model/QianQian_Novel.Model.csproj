@@ -8,4 +8,8 @@
     <DocumentationFile>../QianQian_Novel/bin/Debug/net6.0/QianQian_Model.xml</DocumentationFile>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\QianQian_Novel.MyUtility\QianQian_Novel.MyUtility.csproj" />
+  </ItemGroup>
+
 </Project>

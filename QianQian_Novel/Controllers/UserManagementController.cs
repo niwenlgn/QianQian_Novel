@@ -1,13 +1,12 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json.Linq;
 using QianQian_Novel.Domain.RedisDemo.Service;
 using QianQian_Novel.Helper;
 using QianQian_Novel.Model.Basic;
 using QianQian_Novel.Model.Enum;
 using QianQian_Novel.Model.UserManagement;
 using QianQian_Novel.MyUtility;
+using QianQian_Novel.MyUtility.AttributeRepository;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 
@@ -37,10 +36,50 @@ namespace QianQian_Novel.Controllers
             _dbService = dbService;
             _jwtHelper = jwtHelper;
         }
+
+        /// <summary>
+        /// 登录
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns></returns>
+        [AllowAnonymous]
+        [HttpPost]
+        public async Task<object> Login([FromBody] LoginRequest dto)
+        {
+            var loginRes = await _dbService.Login(dto);
+            if (loginRes.Code != BaseStatusCode.Success || loginRes.Data is null)
+            {
+                return new BaseResponse()
+                {
+                    Code = loginRes.Code,
+                    Msg = loginRes.Msg
+                };
+            }
+            var auths = new List<Claim>()
+            {
+                new Claim(ClaimTypes.GivenName, loginRes.Data.UserName),
+                new Claim(ClaimTypes.NameIdentifier, loginRes.Data.Userid.ToString()),
+                new Claim(ClaimTypes.Name, loginRes.Data.UserName)
+            };
+            var token = _jwtHelper.GetToken(auths);
+            return new BaseResponse<object>()
+            {
+                Code = loginRes.Code,
+                Msg = loginRes.Msg,
+                Data = new
+                {
+                    token = $"Bearer {new JwtSecurityTokenHandler().WriteToken(token)}",
+                    expiration = token.ValidTo
+                }
+            };
+        }
+
+
         /// <summary>
         /// 测试Get请求
         /// </summary>
         /// <returns></returns>
+        [Hidden]
         [HttpGet]
         public async Task<object> Test()
         {
@@ -99,43 +138,6 @@ namespace QianQian_Novel.Controllers
                 Msg = res ? "保存成功" : "保存失败"
             };
             return await Task.FromResult(a);
-        }
-
-        /// <summary>
-        /// 登录
-        /// </summary>
-        /// <param name="dto"></param>
-        /// <returns></returns>
-        [AllowAnonymous]
-        [HttpPost]
-        public async Task<object> Login([FromBody] LoginRequest dto)
-        {
-            var loginRes = await _dbService.Login(dto);
-            if (loginRes.Code != BaseStatusCode.Success || loginRes.Data is null)
-            {
-                return new BaseResponse()
-                {
-                    Code = loginRes.Code,
-                    Msg = loginRes.Msg
-                };
-            }
-            var auths = new List<Claim>()
-            {
-                new Claim(ClaimTypes.GivenName, loginRes.Data.UserName),
-                new Claim(ClaimTypes.NameIdentifier, loginRes.Data.Userid.ToString()),
-                new Claim(ClaimTypes.Name, loginRes.Data.UserName)
-            };
-            var token = _jwtHelper.GetToken(auths);
-            return new BaseResponse<object>()
-            {
-                Code = loginRes.Code,
-                Msg = loginRes.Msg,
-                Data = new
-                {
-                    token = new JwtSecurityTokenHandler().WriteToken(token),
-                    expiration = token.ValidTo
-                }
-            };
         }
 
         /// <summary>

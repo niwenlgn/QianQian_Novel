@@ -5,6 +5,10 @@ using System.Reflection;
 using QianQian_Novel.Middleware;
 using QianQian_Novel.Helper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.OpenApi.Models;
+using QianQian_Novel.Filter;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 var _configuration = builder.Configuration;
@@ -28,12 +32,35 @@ builder.Services.AddAuthentication(options =>
     options.RequireHttpsMetadata = false;
     options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
     {
-        ValidateIssuer = true,
-        ValidateAudience = true
+        ValidateIssuerSigningKey = true,//是否验证签名
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration.GetSection("JWT:Secret").Value)),
+        ValidateIssuer = true,//是否验证发行人
+        ValidIssuer = _configuration.GetSection("JWT:Issuer").Value,
+        ValidateAudience = true,//是否验证订阅人
+        ValidAudience = _configuration.GetSection("JWT:Audience").Value,
     };
 });
 builder.Services.AddSwaggerGen(option =>
 {
+    var scheme = new OpenApiSecurityScheme()
+    {
+        Description = "Authorization header. \r\nExample: 'Bearer abcdefxxx'",
+        Reference = new OpenApiReference
+        {
+            Type = ReferenceType.SecurityScheme,
+            Id = "Authorization"
+        },
+        Scheme = "oauth2",
+        Name = "Authorization",
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.ApiKey,
+    };
+    option.AddSecurityDefinition("Authorization", scheme);
+    var requirement = new OpenApiSecurityRequirement();
+    requirement[scheme] = new List<string>();
+    option.AddSecurityRequirement(requirement);
+    option.DocumentFilter<HiddenApiFilter>();
+    option.SchemaFilter<HiddenFieldFilter>();
     option.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "QianQian_Novel.xml"), true);
     option.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "QianQian_Entity.xml"), true);
     option.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "QianQian_Model.xml"), true);

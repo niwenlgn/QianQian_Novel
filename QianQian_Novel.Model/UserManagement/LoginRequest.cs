@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QianQian_Novel.MyUtility.AttributeRepository;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -25,6 +26,7 @@ namespace QianQian_Novel.Model.UserManagement
         /// <summary>
         /// 验证码
         /// </summary>
+        [HiddenField]
         public string? Code { get; set; }
     }
 }

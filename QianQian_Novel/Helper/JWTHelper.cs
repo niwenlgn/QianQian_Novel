@@ -32,6 +32,8 @@ namespace QianQian_Novel.Helper
             var token = new JwtSecurityToken(
                     expires: DateTime.Now.AddHours(3),
                     claims: authClaims,
+                    issuer: _configuration.GetSection("JWT:Issuer").Value,
+                    audience: _configuration.GetSection("JWT:Audience").Value,
                     signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256)
                 );
             return token;
