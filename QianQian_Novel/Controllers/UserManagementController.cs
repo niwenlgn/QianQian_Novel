@@ -61,7 +61,7 @@ namespace QianQian_Novel.Controllers
                 new Claim(ClaimTypes.NameIdentifier, loginRes.Data.Userid.ToString()),
                 new Claim(ClaimTypes.Name, loginRes.Data.UserName)
             };
-            var token = _jwtHelper.GetToken(auths);
+            var token = _jwtHelper.TokenGenerator(auths);
             return new BaseResponse<object>()
             {
                 Code = loginRes.Code,
@@ -73,7 +73,6 @@ namespace QianQian_Novel.Controllers
                 }
             };
         }
-
 
         /// <summary>
         /// 测试Get请求
@@ -171,7 +170,6 @@ namespace QianQian_Novel.Controllers
                 throw;
             }
         }
-
 
         /// <summary>
         /// 测试pg数据库

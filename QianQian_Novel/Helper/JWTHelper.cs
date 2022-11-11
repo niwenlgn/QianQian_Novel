@@ -26,7 +26,7 @@ namespace QianQian_Novel.Helper
         /// </summary>
         /// <param name="authClaims"></param>
         /// <returns></returns>
-        public JwtSecurityToken GetToken(List<Claim> authClaims)
+        public JwtSecurityToken TokenGenerator(List<Claim> authClaims)
         {
             var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration.GetSection("JWT:Secret").Value));
             var token = new JwtSecurityToken(
