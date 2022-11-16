@@ -62,6 +62,7 @@ namespace QianQian_Novel.Controllers
                 new Claim(ClaimTypes.Name, loginRes.Data.UserName)
             };
             var token = _jwtHelper.TokenGenerator(auths);
+            Response.Headers.Add("auth", $"Bearer {new JwtSecurityTokenHandler().WriteToken(token)}");
             return new BaseResponse<object>()
             {
                 Code = loginRes.Code,

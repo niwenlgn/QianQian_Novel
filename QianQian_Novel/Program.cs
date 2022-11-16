@@ -21,6 +21,18 @@ builder.Services.AddAutoMapper(typeof(AutoMapperProfiles));
 builder.Services.AddRepository(_configuration.GetConnectionString("PG_Master"));
 builder.Services.AddDomain();
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSome", policy =>
+    {
+        policy
+        .AllowAnyHeader().SetPreflightMaxAge(TimeSpan.FromSeconds(60))
+        .AllowAnyMethod()
+        .WithOrigins(_configuration.GetSection("AppSettings:CorsAllowUrl").Get<string[]>())
+        .AllowCredentials()
+        .WithExposedHeaders("Content-Disposition");//允许浏览器访问额外的自定义头
+    });
+});
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -76,6 +88,7 @@ else
 {
     app.UseHttpsRedirection();
 }
+app.UseCors("AllowSome");
 app.UseAuthentication();
 app.UseAuthorization();
 app.ConstantInitialization();
