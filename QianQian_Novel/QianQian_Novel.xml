@@ -17,6 +17,13 @@
             <param name="dbService"></param>
             <param name="jwtHelper"></param>
         </member>
+        <member name="M:QianQian_Novel.Controllers.UserManagementController.Login(QianQian_Novel.Model.UserManagement.LoginRequest)">
+            <summary>
+            登录
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
         <member name="M:QianQian_Novel.Controllers.UserManagementController.Test">
             <summary>
             测试Get请求
@@ -36,13 +43,6 @@
             </summary>
             <param name="jobj">验证信息</param>
             <param name="id">关联ID</param>
-            <returns></returns>
-        </member>
-        <member name="M:QianQian_Novel.Controllers.UserManagementController.Login(QianQian_Novel.Model.UserManagement.LoginRequest)">
-            <summary>
-            登录
-            </summary>
-            <param name="dto"></param>
             <returns></returns>
         </member>
         <member name="M:QianQian_Novel.Controllers.UserManagementController.Test3(QianQian_Novel.Model.UserManagement.LoginRequest,System.String)">
@@ -108,7 +108,7 @@
             </summary>
             <param name="configuration"></param>
         </member>
-        <member name="M:QianQian_Novel.Helper.JWTHelper.GetToken(System.Collections.Generic.List{System.Security.Claims.Claim})">
+        <member name="M:QianQian_Novel.Helper.JWTHelper.TokenGenerator(System.Collections.Generic.List{System.Security.Claims.Claim})">
             <summary>
             获取JWT Token
             </summary>
